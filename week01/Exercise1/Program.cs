@@ -16,6 +16,6 @@ class Program
 
         // Greet the user by their full name
         Console.WriteLine();
-        Console.Write($"Hello, your name is {lastName}, {firstName} {lastName}! Welcome to C# programming.");
+        Console.Write($"Your name is {lastName}, {firstName} {lastName}.");
     }
 }
