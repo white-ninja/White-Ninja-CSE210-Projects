@@ -1,3 +1,4 @@
+// This is the main program file for the YouTubeVideos project. It creates several video objects, adds comments to them, and displays their information.
 using System;
 
 class Program

@@ -1,3 +1,4 @@
+// This class represents a YouTube video, including its title, author, length, and comments. It provides methods to add comments and display video information.
 using System.Collections.Generic;
 
 public class Video

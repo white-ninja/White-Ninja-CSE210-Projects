@@ -1,3 +1,4 @@
+// Comment.cs
 public class Comment
 {
     public string CommenterName { get; set; }
