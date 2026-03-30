@@ -1,0 +1,140 @@
+Foundation Program #1: Abstraction with YouTube Videos
+| Class     | Responsibilities                                                                                                                       |
+| --------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `Video`   | - Store title, author, length - Store a list of Comment objects - Add comments to the video - Return the number of comments 
+| `Comment` | - Store commenter name - Store comment text                                                                                         
+
+Attributes and Methods
+Video
+_ _ _ _ _ 
+
+Attributes:
+- title : string
+- author : string
+- length : int (seconds)
+- comments : List<Comment>
+
+Methods:
+- AddComment(comment: Comment)
+- GetNumberOfComments() : int
+- DisplayVideoInfo()
+
+Comment
+_ _ _ _ _ 
+
+Attributes:
+- commenterName : string
+- text : string
+
+Methods:
+- DisplayComment()
+
+ Abstraction with YouTube Videos - Class Diagram
+Video
++-------------------+
+| - title           |
+| - author          |
+| - length          |
+| - comments: List  |
++-------------------+
+| + AddComment()    |
+| + GetNumberOfComments() |
+| + DisplayVideoInfo()    |
++-------------------+
+
+Comment
++-------------------+
+| - commenterName   |
+| - text            |
++-------------------+
+| + DisplayComment()|
++-------------------+
+
+Foundation Program #2: Encapsulation with Online Ordering
+| Class      | Responsibilities                                                                                                                                   |
+| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+|  Product  | - Store name, ID, price, quantity - Calculate total cost for the product                                                                        |
+|  Customer | - Store name and `Address` object - Determine if customer is in the USA                                                                         |
+|  Address  | - Store street, city, state/province, country - Determine if in USA - Return formatted address string                                        |
+|  Order    | - Store list of `Product` objects and `Customer - Calculate total cost including shipping - Return packing label - Return shipping label |
+
+Attributes and Methods
+
+Product
+Attributes:
+- name : string
+- productID : string
+- price : decimal
+- quantity : int
+
+Methods:
+- GetTotalCost() : decimal
+
+Customer
+Attributes:
+- name : string
+- address : Address
+
+Methods:
+- IsInUSA() : bool
+
+Address
+Attributes:
+- street : string
+- city : string
+- state : string
+- country : string
+
+Methods:
+- IsInUSA() : bool
+- GetFullAddress() : string
+
+Order
+Attributes:
+- products : List<Product>
+- customer : Customer
+
+Methods:
+- GetTotalPrice() : decimal
+- GetPackingLabel() : string
+- GetShippingLabel() : string
+
+Class Diagram
+Order
++----------------------+
+| - products: List     |
+| - customer: Customer |
++----------------------+
+| + GetTotalPrice()    |
+| + GetPackingLabel()  |
+| + GetShippingLabel() |
++----------------------+
+
+Customer
++-------------------+
+| - name            |
+| - address: Address|
++-------------------+
+| + IsInUSA()       |
++-------------------+
+
+Address
++-------------------+
+| - street          |
+| - city            |
+| - state           |
+| - country         |
++-------------------+
+| + IsInUSA()       |
+| + GetFullAddress()|
++-------------------+
+
+Product
++-------------------+
+| - name            |
+| - productID       |
+| - price           |
+| - quantity        |
++-------------------+
+| + GetTotalCost()  |
++-------------------+
