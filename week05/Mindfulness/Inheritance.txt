@@ -1,0 +1,39 @@
+What is inheritance and why is it important?
+
+Inheritance is an object-oriented programming principle that allows one class (called a child or derived class)
+to reuse the properties and behaviors of another class (called a parent or base class).
+Instead of rewriting the same code in multiple places, developers can place shared attributes 
+and methods in a base class and allow other classes to inherit them.
+This creates a clear relationship between classes and promotes code reuse and organization.
+
+One major benefit of inheritance is that it reduces code duplication and makes programs easier to maintain.
+When shared functionality is stored in a base class, any updates only need to be made in one location. 
+This improves readability, reduces errors, and makes the code easier to expand as the program grows.
+
+In my Mindfulness Program, inheritance was used to create a base Activity class that contained shared features
+such as the activity name, description, duration, and the starting and ending messages. 
+Then, the specific activities (Breathing, Reflection, and Listing) inherited from this class
+and added their own unique behavior.
+
+For example, the BreathingActivity class inherits from Activity as shown below:
+
+public class BreathingActivity : Activity
+{
+    public BreathingActivity() 
+        : base("Breathing Activity",
+        "This activity will help you relax by guiding your breathing.")
+    { }
+
+    public void Run()
+    {
+        DisplayStartingMessage();
+        // Breathing logic here
+        DisplayEndingMessage();
+    }
+}
+
+In this example, the BreathingActivity class automatically gains access to methods like DisplayStartingMessage()
+and DisplayEndingMessage() from the Activity base class. This allowed me to avoid rewriting the same code in every activity class. 
+Instead, each activity only needed to focus on its unique functionality.
+
+Overall, inheritance is important because it helps programmers build scalable, organized, and reusable software systems.
