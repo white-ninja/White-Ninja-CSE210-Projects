@@ -1,0 +1,32 @@
+Abstraction is a fundamental concept in object-oriented programming (OOP) where complex implementation 
+details are hidden while only the essential features of an object are exposed to the user. 
+In simple terms, abstraction allows a programmer to interact with an object through clear and simple methods
+without needing to understand how everything works internally. Instead of dealing with the internal structure
+of a program, users interact with a simplified interface.
+
+One important benefit of abstraction is that it makes programs easier to maintain and modify. 
+Because the internal details are hidden, the way data is stored or processed can change without
+affecting the rest of the program. This improves code organization, reduces errors, and makes large programs
+easier to manage.
+
+An application of abstraction can be seen in the Resume program that uses Job and Resume classes. 
+Instead of directly accessing the list of jobs inside the Resume class, we create a method that manages
+how jobs are added. This hides the internal data structure from the rest of the program.
+
+For example:
+
+public class Resume
+{
+    public List<Job> _jobs = new List<Job>();
+
+    public void AddJob(Job job)
+    {
+        _jobs.Add(job);
+    }
+}
+
+In this example, the AddJob method represents abstraction. Other parts of the program simply call AddJob(job) 
+instead of directly modifying the _jobs list. This means the program does not need to know how the jobs are stored 
+internally; it only needs to know how to add a job. If the internal storage method changes later, the rest of the 
+program will still work. This demonstrates how abstraction simplifies interaction with complex systems while 
+protecting internal implementation details.
