@@ -1,0 +1,84 @@
+Programming with Classes – Principles Explanation
+
+Programming with classes is built on four key principles: abstraction, encapsulation, inheritance, and polymorphism. 
+Throughout this course, I applied these principles in multiple projects, especially the Foundation programs
+such as the Mindfulness program and the Exercise Tracking program.
+
+1. Abstraction
+
+Definition
+
+Abstraction is the process of focusing on essential features while hiding unnecessary details. 
+It allows programmers to work with simplified models of complex systems.
+
+How I used it
+
+I used abstraction in the Mindfulness project by creating a base Activity class that represented a general mindfulness activity.
+The program didn’t need to know the internal details of breathing, reflection, or listing activities 
+it only needed to know that an activity could start, display messages, and run for a certain duration.
+
+How it improves flexibility
+
+Abstraction makes programs easier to extend. If I wanted to add a new mindfulness activity in the future, 
+I could create a new class that follows the same structure without changing the rest of the program. 
+This reduces complexity and allows the software to grow without rewriting existing code.
+
+2. Encapsulation
+
+Definition
+
+Encapsulation means protecting data by keeping fields private and controlling access through public methods. 
+This ensures that objects manage their own data safely.
+
+How I used it
+
+In the Exercise Tracking program, each class (Running, Cycling, Swimming) stored its data in private variables
+such as minutes, distance, speed, and laps. Instead of allowing other parts of the program to directly change these values, 
+the program accessed them through methods like GetDistance() and GetSpeed().
+
+How it improves flexibility
+
+Encapsulation protects the program from unintended changes. 
+If I later needed to change how distance is calculated, I could modify the method without affecting 
+the rest of the program. This makes maintenance and updates much safer.
+
+3. Inheritance
+
+Definition
+
+Inheritance allows one class to reuse properties and behaviors from another class. 
+A base class defines shared features, and derived classes add specialized behavior.
+
+How I used it
+
+In the Exercise Tracking program, I created a base Activity class that stored shared data such as date and minutes. 
+Then I created derived classes for Running, Cycling, and Swimming that inherited from the base class and added 
+their own unique data and calculations.
+
+How it improves flexibility
+
+Inheritance prevents duplicated code and makes programs easier to expand.
+If the gym later adds a new activity (for example, rowing), I could create a new class that inherits from Activity
+and reuse the existing structure. This saves time and keeps the code organized.
+
+4. Polymorphism
+
+Definition
+
+Polymorphism allows objects of different classes to be treated as objects of 
+the same base class, while still using their own specific behaviors.
+
+How I used it
+
+In the Exercise Tracking program, I stored Running, Cycling, and Swimming objects in a single List<Activity>. 
+When the program called GetSummary() on each item, the correct version of the method was automatically used depending on the object type.
+
+How it improves flexibility
+
+Polymorphism makes programs easier to scale. The program can work with new activity types without changing the main logic. 
+The list and loop stay the same, while new behaviors are added through new classes.
+
+Conclusion
+
+Using abstraction, encapsulation, inheritance, and polymorphism together helped me build programs that are organized, reusable,
+and easy to expand. These principles are essential for writing maintainable software and preparing code for future growth and new features.
